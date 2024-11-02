@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background:#d62700;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+.navbar .logo a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+.logo #icon-logo {
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+}
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+  
+.navbar .nav-menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    transition: 0.2s ease;
+}
+  
+.navbar .nav-menu a:hover {
+    color: #831;
+}
+.navbar .button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 15px 0;
+    transition: 0.2s ease;
+}
+.navbar .button a:not(:last-child) {
+    margin-right: 30px;
+}
+  
+.navbar .button .login:hover {
+    color: #831;
+}
+.navbar .button .pedido:hover {
+    background-color: black;
+}
+.button .pedido {
+    background-color:#8c240d;
+    border-radius: 50px;
+}
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.info-section .info {
+  flex: 1;
+  max-width: 50%;
+  color: #fff;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c9c7c7;
+}
+.info-section .img {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.info-section .img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.founders {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.founders h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.founder-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.founder {
+  background-color: #8c240d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #8c240d;
+  text-align: center;
+  margin: 1rem;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.founder:hover {
+  transform: translateY(-10px);
+}
+
+.founder img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.founder h3 {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.description {
+  color: #c9c7c7;
+}
+
+@media (min-width: 768px) {
+  .founders {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .founder {
+      flex: 1 1 calc(50% - 2rem);
+      max-width: calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .founder {
+      flex: 1 1 calc(25% - 2rem);
+      max-width: calc(25% - 2rem);
+  }
+}

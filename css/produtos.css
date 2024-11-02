@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #d62700;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+.navbar .logo a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+.logo #icon-logo {
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+}
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+  
+.navbar .nav-menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    transition: 0.2s ease;
+}
+  
+.navbar .nav-menu a:hover {
+    color: #831;
+}
+.navbar .button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 15px 0;
+    transition: 0.2s ease;
+}
+.navbar .button a:not(:last-child) {
+    margin-right: 30px;
+}
+  
+.navbar .button .login:hover {
+    color: #831;
+}
+.navbar .button .pedido:hover {
+    background-color: black;
+}
+.button .pedido {
+    background-color: #8c240d;
+    border-radius: 50px;
+}
+.info h2 {
+    align-items: center;
+    color: #fff;
+    margin-left: 20%;
+}
+.info-section {
+    margin-left: 30%;
+    margin-top: 80px;
+}
+.info-section .info button {
+    margin-top: 5%;
+    margin-left: 40px;
+}
+.info button {
+    margin-bottom: 90%;
+}
+.info button {
+    background-color: #8c240d;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.info button:hover {
+    background-color: rgb(124, 37, 3);
+}
+#catalogo {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.categoria {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.produto {
+    background-color: white;
+    border: 1px solid #8c240d;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.categoria h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    color: #d62700;
+}
+
+.produto p {
+    color: #666;
+}
+@media (max-width: 768px) {
+    .categoria {
+        flex-wrap: wrap; /
+}
+    .produto {
+        width: 100%; 
+    }
+}
+
+
+

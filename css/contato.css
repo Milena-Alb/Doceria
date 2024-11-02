@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #d62700;
+
+}
+
+header {
+    border-bottom: 3px solid #8c240d; 
+    padding-bottom: 10px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo #icon-logo {
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+  
+.navbar .nav-menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    transition: 0.2s ease;
+}
+  
+.navbar .nav-menu a:hover {
+    color: #831;
+}
+
+.navbar .button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: 0.2s ease;
+}
+
+.navbar .button .pedido {
+    background-color: #8c240d;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: #fff;
+    border-color: transparent;
+}
+
+.navbar .button .pedido:hover {
+    background-color: black;
+}
+
+.contato-header {
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.contato-header h1 {
+    font-size: 2.5em;
+}
+
+.contato-header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.contato-section {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: #d62700;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.card button {
+    background-color: #8c240d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #d62700;
+}

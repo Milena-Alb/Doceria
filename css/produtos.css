@@ -19,6 +19,11 @@ body {
     left: 0;
     width: 100%;
 }
+header {
+    border-bottom: 3px solid #8c240d; 
+    padding-bottom: 10px; 
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -55,20 +60,15 @@ body {
 .navbar .nav-menu a:hover {
     color: #831;
 }
-.navbar .button a {
-    text-decoration: none;
+.navbar .button .pedido{
+    background-color: #8c240d;
+    border-radius: 50px;
+    padding: 10px 20px;
     color: #fff;
-    font-size: 1rem;
-    padding: 15px 0;
+    border-color: transparent;
     transition: 0.2s ease;
 }
-.navbar .button a:not(:last-child) {
-    margin-right: 30px;
-}
   
-.navbar .button .login:hover {
-    color: #831;
-}
 .navbar .button .pedido:hover {
     background-color: black;
 }
@@ -105,6 +105,18 @@ body {
 .info button:hover {
     background-color: rgb(124, 37, 3);
 }
+
+.linha-categorias::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #8c240d;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+   
+}
 #catalogo {
     padding: 2rem;
     max-width: 1200px;
@@ -126,8 +138,12 @@ body {
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    width: 200px;
+    width: 250px;
+    height: 400px;
     box-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+
 }
 
 .categoria h2 {
@@ -136,8 +152,9 @@ body {
 }
 
 .produto img {
-    width: 100%;
-    height: auto;
+    width: 214px;
+    height: 214px;
+    border: 2px solid rgb(84, 0, 0);
     border-radius: 8px;
 }
 

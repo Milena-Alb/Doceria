@@ -19,6 +19,10 @@ body {
     left: 0;
     width: 100%;
 }
+header {
+    border-bottom: 3px solid #8c240d; 
+    padding-bottom: 10px; 
+}
 .navbar {
     display: flex;
     align-items: center;
@@ -55,27 +59,19 @@ body {
 .navbar .nav-menu a:hover {
     color: #831;
 }
-.navbar .button a {
-    text-decoration: none;
+.navbar .button .pedido{
+    background-color: #8c240d;
+    border-radius: 50px;
+    padding: 10px 20px;
     color: #fff;
-    font-size: 1rem;
-    padding: 15px 0;
+    border-color: transparent;
     transition: 0.2s ease;
 }
-.navbar .button a:not(:last-child) {
-    margin-right: 30px;
-}
   
-.navbar .button .login:hover {
-    color: #831;
-}
 .navbar .button .pedido:hover {
     background-color: black;
 }
-.button .pedido {
-    background-color: #8c240d;
-    border-radius: 50px;
-}
+
 .info-section {
     display: flex;
     justify-content: space-between;
@@ -104,14 +100,18 @@ body {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #c9c7c7;
+    text-align: justify;
+    text-indent: 50px;
 }
 .info-section .img {
     flex: 1;
     max-width: 50%;
     display: flex;
     justify-content: flex-end;
+    
 }
 .info-section .img img {
     max-width: 100%;
     height: auto;
+    border: 3px solid rgb(28, 0, 0) ;
 }

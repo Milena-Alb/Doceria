@@ -3,68 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cherry Rush | Adiministração</title>
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css">
-    <link rel="stylesheet" href="admin.css">
+    <title>CherryRush | Gerenciamento</title>
+    <link rel="stylesheet" href="../admin/admin.css">
+    <link rel="stylesheet" href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
+<div id="editModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h3>Editar Item</h3>
+        <label for="editName">Nome:</label>
+        <input type="text" id="editName">
+        <label for="editDescription">Descrição:</label>
+        <textarea id="editDescription"></textarea>
+        <label for="editPrice">Preço:</label>
+        <input type="text" id="editPrice">
+        <button onclick="saveEdit()">Salvar</button>
+    </div>
+</div>
+
 <body>
     <header>
         <nav class="navbar">
-            <h2 class="logo"><i id="icon-logo" class="fi fi-ts-cherry"></i><a href="admin.html">CherryRush</a></h2>
-            <nav>
-                <button class="produtos" onclick="">Produtos</button>
-            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <h2 class="logo"><i id="icon-logo" class="fi fi-ts-cherry"></i><a href="home.html">CherryRush</a></h2>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>  
+            <div class="button">
+                <button class="pedido" onclick="window.location.href='https://wa.me/5599999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido.%20Podemos%20conversar?'">Faça seu pedido</button>
+            </div>
         </nav>
     </header>
-    <section class="page-inicial">
-        <h2>Bem vindo Adiministrador!</h2>
-        <div class="img">
-            <img src="/assets/cherry.svg" alt="logo" />
-        </div>
 
-    </section>
-    <section class="admin-container">
-        <div class="form-section">
-            <h2>Adicionar Novo Produto</h2>
-            <form id="form-produto">
-                <label for="produtoNome">Nome do Produto:</label>
-                <input type="text" id="produtoNome" name="produtoNome" required>
-
-                <label for="produtoDescricao">Descrição:</label>
-                <textarea id="produtoDescricao" name="produtoDescricao" rows="4" required></textarea>
-
-                <label for="produtoPreco">Preço:</label>
-                <input type="number" id="produtoPreco" name="produtoPreco" required>
-
-                <label for="produtoImagem">Imagem do Produto:</label>
-                <input type="file" id="produtoImagem" name="produtoImagem" accept="image/*">
-
-                <button type="submit">Adicionar Produto</button>
-            </form>
-        </div>
-
-        <!-- Lista de produtos com opções para editar e remover -->
-        <div class="product-list">
-            <h2>Produtos Cadastrados</h2>
-            <ul id="productList">
-                <!-- Exemplo de item de produto -->
-                <li>
-                    <div class="product-item">
-                        <img src="path/to/product-image.jpg" alt="Imagem do Produto">
-                        <h3>Nome do Produto</h3>
-                        <p>Preço: R$ <span>00,00</span></p>
-                        <p>Descrição do produto...</p>
-                        <button class="edit-btn">Editar</button>
-                        <button class="delete-btn">Remover</button>
-                    </div>
-                </li>
-                <!-- Os produtos serão carregados dinamicamente aqui -->
+    <div class="sidebar" id="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li onclick="togglePanel('produtosPanel')">Categorias</li>
+        </ul>
+        <div class="panel" id="produtosPanel" style="display: none;">
+            <ul>
+                <li onclick="showCategory('kitFesta')">Kit Festa</li>
+                <li onclick="showCategory('docinhos')">Docinhos</li>
+                <li onclick="showCategory('salgados')">Salgados</li>
+                <li onclick="showCategory('bolo')">Bolo</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <script src="/js/admin.js"></script>
-</body>
-</html>
+    <div id="categoryDisplay" style="display: none;" class="category-display">
+        <div id="categoryImages">
+            <div id="kitFesta" class="category">
+                <div class="item">
+                    <img src="../assets/kit2.jpg" alt="Kit Festa 1" class="category-image">
+                    <h3>Kit Mini Festa</h3>
+                    <p>Pequena seleção de doces e salgados. Perfeito para encontros íntimos.</p>
+                    <p>R$ 120,00</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Kit Festa 1')">Editar</button>
+                        <button onclick="removeItem('Kit Festa 1')">Remover</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/kit.jpg" alt="Kit Festa 2" class="category-image">
+                    <h3>Kit Festa Completo</h3>
+                    <p>Inclui docinhos, salgadinhos e bolo. Ideal para festas pequenas.</p>
+                    <p>R$ 200,00</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Kit Festa 2')">Editar</button>
+                        <button onclick="removeItem('Kit Festa 2')">Remover</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="docinhos" class="category" style="display: none;">
+                <div class="item">
+                    <img src="../assets/brigadeiro.jpeg" alt="Docinhos 1" class="category-image">
+                    <h3>Brigadeiro</h3>
+                    <p> Doce tradicional de chocolate com granulado.
+                        R$ 2,50 cada</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Docinhos 1')">Editar</button>
+                        <button onclick="removeItem('Docinhos 1')">Remover</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/beijinho-de-coco.png" alt="Docinhos 2" class="category-image">
+                    <h3>Beijinho</h3>
+                    <p>  Doce de coco com coco ralado
+                        R$ 2,50 cada</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Docinhos 2')">Editar</button>
+                        <button onclick="removeItem('Docinhos 2')">Remover</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="salgados" class="category" style="display: none;">
+                <div class="item">
+                    <img src="../assets/salgado.jpg" alt="Salgados 1" class="category-image">
+                   <h3>Coxinha</h3>
+                    <p> Salgado recheado com frango cremoso.
+                        R$ 3,00 cada</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Salgados 1')">Editar</button>
+                        <button onclick="removeItem('Salgados 1')">Remover</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/kibe.jpg" alt="Salgados 2" class="category-image">
+                    <h3>Kibe</h3>
+                    <p> Salgado de carne com temperos especial. 
+                        R$ 3,00 cada</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Salgados 2')">Editar</button>
+                        <button onclick="removeItem('Salgados 2')">Remover</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bolo" class="category" style="display: none;">
+                <div class="item">
+                    <img src="../assets/morango.jpg" alt="Bolo 1" class="category-image">
+                    <h3>Bolo de Morango</h3>
+                    <p>Bolo com recheio e cobertura com morango fresco.
+                    R$ 50,00</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Bolo 1')">Editar</button>
+                        <button onclick="removeItem('Bolo 1')">Remover</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/chocolate.jpg" alt="Bolo 2" class="category-image">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>Bolo cremoso de chocolate com cobertura.
+                     R$ 45,00</p>
+                    <div class="buttons">
+                        <button onclick="editItem('Bolo 2')">Editar</button>
+                        <button onclick="removeItem('Bolo 2')">Remover</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../admin/admin.js"></script>
 </body>
 </html>

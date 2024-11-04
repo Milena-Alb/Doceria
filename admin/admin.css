@@ -140,7 +140,7 @@ header {
     width: 100%;
     height: calc(100% - 60px);
     z-index: 500;
-    margin-top: 150px; /* Aumentado para mover mais para baixo */
+    margin-top: 150px; 
 }
 
 
@@ -157,9 +157,9 @@ header {
 }
 
 .category-image {
-    width: 200px;  /* Defina a largura desejada */
-    height: 200px; /* Defina a altura desejada */
-    object-fit: cover; /* Use cover para preencher o contêiner sem distorção */
+    width: 200px;  
+    height: 200px; 
+    object-fit: cover; 
     display: block;
     margin: 10px auto;
 }

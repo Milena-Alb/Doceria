@@ -127,7 +127,27 @@ header {
         width: 150px;
     }
 }
-
+#imagem-logo img{
+    border: 3px solid #fff;
+    margin: 100px 40px 20px; 
+    width: auto;
+    height: auto;   
+}
+#mensagem{
+    text-align: right;
+    margin-top: 140px;
+    margin-right: 50px;
+    color: #fff;
+    font-size: 32px;
+}
+#mensagem, #imagem-logo{
+    display: inline-block;
+    height: 100px;
+}
+#mensagem i{
+    font-size: 82px;
+    margin-right: 110px;
+}
 .category-display {
     display: flex;
     justify-content: center;
@@ -154,6 +174,9 @@ header {
 .category .item {
     width: 300px;
     text-align: center;
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .category-image {

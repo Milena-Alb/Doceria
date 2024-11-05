@@ -33,7 +33,7 @@
         </ul>
         <div class="panel" id="produtosPanel" style="display: none;">
             <ul>
-                <li onclick="showCategory('kitFesta')">Kit Festa</li>
+                <li onclick="showCategory('kitDeFesta')">Kit Festa</li>
                 <li onclick="showCategory('docinhos')">Docinhos</li>
                 <li onclick="showCategory('salgados')">Salgados</li>
                 <li onclick="showCategory('bolo')">Bolo</li>
@@ -52,42 +52,45 @@
 
     <div id="categoryDisplay" style="display: none;" class="category-display">
         <div id="categoryImages">
-
+    
             <!-- Categoria Kit Festa -->
-            <div id="kitFesta" class="category" style="display: none;">
+            <div id="kitDeFesta" class="category" style="display: none;"></div>
                 <button onclick="mostrarFormularioAdicionarProduto()" class="adicionarButton">Adicionar Produto</button>
-                <!-- Itens do Kit Festa serão adicionados aqui -->
             </div>
-
+    
             <!-- Categoria Docinhos -->
             <div id="docinhos" class="category" style="display: none;">
                 <button onclick="mostrarFormularioAdicionarProduto()" class="adicionarButton">Adicionar Produto</button>
-                <!-- Itens de Docinhos serão adicionados aqui -->
             </div>
-
+    
             <!-- Categoria Salgados -->
             <div id="salgados" class="category" style="display: none;">
                 <button onclick="mostrarFormularioAdicionarProduto()" class="adicionarButton">Adicionar Produto</button>
-                <!-- Itens de Salgados serão adicionados aqui -->
             </div>
-
+    
             <!-- Categoria Bolos -->
             <div id="bolo" class="category" style="display: none;">
                 <button onclick="mostrarFormularioAdicionarProduto()" class="adicionarButton">Adicionar Produto</button>
-                <!-- Itens de Bolos serão adicionados aqui -->
             </div>
-
+    
         </div>
     </div>
+    
     <!-- Formulário para Adicionar Produto -->
     <div id="addProduto" class="addProduto" style="display: none;">
         <div class="modal-content">
-            <span class="close-button" onclick="fecharAdicaoProduto()">&times;</span>
+            <span class="close-button" onclick="fecharAdicaoProduto()" style="font-size: 32px; cursor: pointer;">&times;</span>
             <h2>Adicionar Novo Produto</h2>
             <form id="addProdutoForm">
                 <label for="produtoNome">Nome do Produto:</label>
                 <input type="text" id="produtoNome" name="produtoNome" required>
-
+                <label for="produtoCategoria">Categoria:</label>
+                <select id="produtoCategoria" name="produtoCategoria" required>
+                    <option value="kitFesta">Kit Festa</option>
+                    <option value="docinhos">Docinhos</option>
+                    <option value="salgados">Salgados</option>
+                    <option value="bolo">Bolo</option>
+                </select>
                 <label for="produtoDescricao">Descrição:</label>
                 <textarea id="produtoDescricao" name="produtoDescricao" required></textarea>
 
@@ -98,6 +101,7 @@
                 <input type="file" id="produtoImage" name="produtoImage" accept="image/*" required>
 
                 <button type="button" onclick="salvarNovoItem()">Salvar Produto</button>
+
             </form>
         </div>
     </div>

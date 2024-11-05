@@ -4,6 +4,7 @@
   "description": "Projeto \"Cherry Rush\" é um Website fictício desenvolvido como parte da disciplina de Programação Web, projetado para simular a experiência de uma loja online de doces. Criado com HTML, CSS e JavaScript.",
   "main": "index.js",
   "scripts": {
+    "start": "node serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0"
   }
 }
